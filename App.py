@@ -2,6 +2,7 @@ import logging
 from flask import Flask, request, render_template
 from flask_socketio import SocketIO
 from AI.ChatBot import ChatBot
+from waitress import serve
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'top-secret!'
@@ -34,4 +35,4 @@ def hello():
 
 if __name__ == "__main__":
     print('\n\nAccess http://localhost:5001\n\n', )
-    socketio.run(app, port=5001)
+    serve(app, host='0.0.0.0', port=5001)
