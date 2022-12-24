@@ -90,7 +90,7 @@ class ChatBot:
       self.sendResult("Chúng tôi không thể chẩn đoán chính xác")
       self.sendResult(f"Bạn có khả năng mắc một trong ba bệnh sau: {eng_vie_disease[previous_result.lower()]}, {eng_vie_disease[second_result.lower()]}, {eng_vie_disease[third_result.lower()]}")
     else:
-      self.sendResult(f"Chúng tôi chẩn đoán bạn bị mắc bệnh: {eng_vie_disease[output_disease.lower().strip()]}'")
+      self.sendResult(f"Chúng tôi chẩn đoán bạn bị mắc bệnh: {eng_vie_disease[output_disease.lower()]}")
     self.sendResult('Bạn hãy chuyển sang trang "Bệnh và Phương Pháp Điều Trị" để xem cách điều trị nhé')
     
     self.chat = self.Predict()
