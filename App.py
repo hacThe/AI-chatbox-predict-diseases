@@ -34,5 +34,5 @@ def hello():
     return message
 
 if __name__ == "__main__":
-    print('\n\nAccess http://localhost:5001\n\n', )
+    print('\n\nAccess http://0.0.0.0:5001\n\n', )
     serve(app, host='0.0.0.0', port=5001)
